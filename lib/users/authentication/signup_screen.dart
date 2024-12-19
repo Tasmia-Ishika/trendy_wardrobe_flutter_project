@@ -1,5 +1,5 @@
 import 'dart:convert';
-//import 'package:clothes_app/users/authentication/login_screen.dart';
+
 import 'package:final_flutter_project/api_connection/api_connection.dart';
 import 'package:final_flutter_project/users/authentication/login_screen.dart';
 import 'package:final_flutter_project/users/model/user.dart';
@@ -16,6 +16,8 @@ class SignUpScreen extends StatefulWidget
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
 }
+
+
 
 class _SignUpScreenState extends State<SignUpScreen>
 {
@@ -42,7 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen>
 
         if(resBodyOfValidateEmail['emailFound'] == true)
         {
-          Fluttertoast.showToast(msg: "Email is already in use. Try another email.");
+          Fluttertoast.showToast(msg: "Email is already in someone else use. Try another email.");
         }
         else
         {
@@ -83,7 +85,7 @@ class _SignUpScreenState extends State<SignUpScreen>
         var resBodyOfSignUp = jsonDecode(res.body);
         if(resBodyOfSignUp['success'] == true)
         {
-          Fluttertoast.showToast(msg: "Congratulations, you are signed up successfully.");
+          Fluttertoast.showToast(msg: "Congratulations, you are SignUp Successfully.");
 
           setState(() {
             nameController.clear();
@@ -112,7 +114,7 @@ class _SignUpScreenState extends State<SignUpScreen>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: LayoutBuilder(
         builder: (context, cons)
         {
@@ -145,8 +147,8 @@ class _SignUpScreenState extends State<SignUpScreen>
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 8,
-                            color:  Color(0xFFEEEEEE),
-                            offset: Offset(0, 10),
+                            color: Colors.black26,
+                            offset: Offset(0, -3),
                           ),
                         ],
                       ),
@@ -353,7 +355,8 @@ class _SignUpScreenState extends State<SignUpScreen>
                                 const Text(
                                     "Already have an Account?",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white70,
+                                    fontSize: 14,
                                   ),
                                 ),
                                 TextButton(
@@ -364,8 +367,7 @@ class _SignUpScreenState extends State<SignUpScreen>
                                   child: const Text(
                                     "Login Here",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
+                                      color: Colors.white,
                                       fontSize: 16,
                                     ),
                                   ),

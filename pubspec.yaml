@@ -39,7 +39,12 @@ dependencies:
   http: ^1.2.2
   fluttertoast: ^8.2.8
   shared_preferences: ^2.3.3
+  intl: ^0.20.1
+  image_picker: ^1.1.2
+  font_awesome_flutter: ^10.8.0
+  flutter_rating_bar: ^4.0.1
 
+  path: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
