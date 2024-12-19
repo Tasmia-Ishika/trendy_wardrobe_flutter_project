@@ -1,6 +1,6 @@
-# Trendy Wardrobe App using MySQL, Flutter & Dart
+# Trendy Wardrobe 
 
-This app is called "Trendy  Wardrobe"
+This app is called "Trendy  Wardrobe. I made this app using MySQL database, Flutter framework & Dart Language.
 
 ## About App
 
